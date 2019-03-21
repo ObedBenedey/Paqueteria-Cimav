@@ -1,0 +1,13 @@
+{
+    "name": "obed/phpmailer",
+    "description": "Prueba de Email",
+    "authors": [
+        {
+            "name": "Obed",
+            "email": "obed.rodriguez@cimav.edu.mx"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.0"
+    }
+}

@@ -1,0 +1,125 @@
+.product-name{
+
+	font-size: 1.2em;
+	color: #01154F;
+	
+}
+.product-image{
+	height: 100%;
+	width: 100%;
+}
+.width: {
+	width: 215px;
+}
+
+.alain{
+	justify-content: center;
+
+}
+.margin-login{
+
+	width: 40%;
+	margin-top: 9rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+
+
+
+
+}
+.fondo-login{
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #66999;
+}
+.img-login{
+	width: 35%;
+	height: auto;
+	background: white;
+}
+.imgs-productos{
+	width: 50%;
+	height: auto;
+	background: white;
+}
+.sign-in{
+	color: gray;
+	margin-top: 0em
+
+
+
+}
+.logo-modal{
+	margin-top: .5em;
+	margin-left: .1em;
+}
+.card-login{
+	border-radius: 13px 13px 13px 13px;
+	-moz-border-radius: 13px 13px 13px 13px;
+	-webkit-border-radius: 13px 13px 13px 13px;
+	opacity: 0.95;
+}
+
+
+.btn-login{
+	background-color: rgb(187,188,204);
+
+}
+
+.img-main{
+	width: 100%;
+
+
+}
+.txt-main{
+
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 24px;
+	letter-spacing: -1.6px;
+	word-spacing: 5px;
+	color: #000000;
+	font-weight: 400;
+	text-decoration: none;
+	font-style: italic;
+	font-variant: normal;
+	text-transform: none;
+	font-family: arial;   
+}
+
+.carruselMain{
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #66999;
+
+}
+
+
+.altura{
+	height: 673px;
+}
+.modal-login{
+        display: none;
+        position: absolute;
+        top: 13REM;
+        left: 13REM;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index:1001;
+        opacity:.75;
+        -moz-opacity: 0.75;
+       }
+
+
+.color-text{
+ text-align-last: : #212121 grey darken-4;
+}
+
+
