@@ -26,7 +26,7 @@ try {
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
     ## MENSAJE A ENVIAR
-    $mail->setFrom('obed.rodriguez@cimav.edu.mx');
+    $mail->setFrom('obed.rodriguez@cimav.edu.mx');//remitente
     $mail->addAddress($destinatario.'@cimav.edu.mx');//esto es la variable a donde lo enviaremos
     $mail->isHTML(true);
     $mail->Subject = 'LLEGO PAQUETERIA';

@@ -48,7 +48,7 @@
 		
 <div id="test1" class="col s12">
    <center>
-		<form action="guardar_proceso.php" method="POST" enctype="multipart/form-data"><br><br>
+		<form action="guardarSalida.php" method="POST" enctype="multipart/form-data"><br><br>
 
 			<div class="row">
 				<div class="conteriner">
@@ -61,7 +61,7 @@
 							    <div class="file-field input-field">
 							      <div class="btn">
 							        <span>File</span>
-							        <input REQUIRED name="Imagen" type="file">
+							        <input  name="Imagen" type="file">
 							      </div>
 							      <div class="file-path-wrapper">
 							        <input class="file-path validate" type="text">
