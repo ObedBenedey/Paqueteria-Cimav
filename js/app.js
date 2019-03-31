@@ -32,13 +32,18 @@ function download(dataURL, filename) {
   if (navigator.userAgent.indexOf("Safari") > -1 && navigator.userAgent.indexOf("Chrome") === -1) {
     window.open(dataURL);
   } else {
-    var blob = dataURLToBlob(dataURL);
+      var blob = dataURLToBlob(dataURL);
     var url = window.URL.createObjectURL(blob);
 
     var a = document.createElement("a");
     a.style = "display: none";
     a.href = url;
     a.download = filename;
+
+    document.body.appendChild(a);
+    a.click();
+
+    window.URL.revokeObjectURL(url);
 
  var productosDiv = document.getElementById("productosDiv");
   productosDiv.innerHTML="";
@@ -49,10 +54,10 @@ productosDiv.innerHTML =`
     <div class="file-field input-field">
       <div class="btn">
         <span>File</span>
-        <input type="file" name="firma" value="${dataURL}">
+        <input type="file" name="firma" value="">
       </div>
       <div class="file-path-wrapper">
-        <input class="file-path validate"  value="${dataURL}" type="text">
+        <input class="file-path validate"  value="" type="text">
       </div>
     </div>
   </form>

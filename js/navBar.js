@@ -134,10 +134,13 @@ buscador.innerHTML+= `
               <th>nombre</th>
               <th>rastreo</th>
               <th>compañia</th>
-              <th>firma</th>
+              <th>firmar</th>
               <th>fecha</th>
+              <th>Firma</th>
+
           </tr>
         </thead>
+        
     `
 const formulario = document.querySelector('#formulario');
 	const resultado = document.querySelector('#registros');
@@ -148,15 +151,17 @@ const texto = formulario.value.toLowerCase();
 for(let product of selectedProducts){
 let nombre = product.nombres.toLowerCase();
 if (nombre.indexOf(texto) !== -1 ) {
-	resultado.innerHTML += 
- 			"<tr>"
-            +"<td>"+product.nombre+"</td>"
-            +"<td>"+product.rastreos+"</td>"
-            +"<td>"+product.companias+"</td>"
-            +"<td><button class='btn'><a class='black-text' href='firma.php?id="+product.id+"'>Firmar</a></button></td>"
-            +"<td>"+product.fechas+"</td>"
-          +"</tr>"
-	
+	resultado.innerHTML += `
+ 			<tr>
+            <td>`+product.nombres+`</td>
+            <td>`+product.rastreos+`</td>
+            <td>`+product.companias+`</td>
+            <td><button class='btn'><a class='black-text' href='firma.php?id=`+product.id+`'>Firmar</a></button></td>
+            <td>`+product.fechas+`</td>
+            <td><img width="90" src="`+product.firmas+`"></td>
+          </tr>
+
+	`
   }
  }
  if (resultado.innerHTML === '') {
