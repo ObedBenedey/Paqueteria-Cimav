@@ -5,4 +5,4 @@
  * Date: 2019-02-26
  * Time: 23:13
  */
-define('EMAIL_PASSWORD', 'MAromero_14');
+define('EMAIL_PASSWORD', 'Almacen1');

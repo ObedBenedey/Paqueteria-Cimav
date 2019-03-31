@@ -10,12 +10,11 @@ $nombre = $_POST['nombre'];
 
 $rastreo = $_POST['rastreo'];
 
-
-//$tipo = $_POST['tipo'];
-//$precio = $_POST['precio'];
+$fecha = $_POST['fechas'];
+$compania = $_POST['companias'];
 //$precioAdministrador = $_POST['precioAdministrador'];
 //$stock = $_POST['stock'];
-$query = "INSERT INTO info(nombre,rastreo) VALUES('$nombre','$rastreo')";
+$query = "INSERT INTO info(nombres,rastreos,fechas,companias) VALUES('$nombre','$rastreo','$fecha','$compania')";
 $resultado = $conexion->query($query);
 
 
