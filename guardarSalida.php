@@ -19,7 +19,14 @@ $resultado = $conexion->query($query);
 
 
 if ($resultado) {
-	header('location: ./index.php');
+
+  $query = "SELECT * FROM info WHERE fechas ='$fecha'";
+  $resultado = $conexion ->query($query);
+  $row = $resultado->fetch_assoc();
+  $enviar = $row['id'];
+
+  
+	header("location: ./firma.php?id=$enviar");
 	# code...
 }else{
 	echo "pero no se inserto la info";

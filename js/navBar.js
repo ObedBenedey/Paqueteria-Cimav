@@ -134,13 +134,13 @@ buscador.innerHTML+= `
               <th>nombre</th>
               <th>rastreo</th>
               <th>compañia</th>
-              <th>firmar</th>
               <th>fecha</th>
               <th>Firma</th>
+              <th></th>
 
           </tr>
         </thead>
-        
+
     `
 const formulario = document.querySelector('#formulario');
 	const resultado = document.querySelector('#registros');
@@ -156,9 +156,9 @@ if (nombre.indexOf(texto) !== -1 ) {
             <td>`+product.nombres+`</td>
             <td>`+product.rastreos+`</td>
             <td>`+product.companias+`</td>
-            <td><button class='btn'><a class='black-text' href='firma.php?id=`+product.id+`'>Firmar</a></button></td>
             <td>`+product.fechas+`</td>
             <td><img width="90" src="`+product.firmas+`"></td>
+            <td><button class=' color-boton'><a class='white-text' href='firma.php?id=`+product.id+`'>f</a></button></td>
           </tr>
 
 	`
