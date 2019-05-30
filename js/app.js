@@ -6,6 +6,8 @@ var savePNGButton = wrapper.querySelector("[data-action=save-png]");
 var saveJPGButton = wrapper.querySelector("[data-action=save-jpg]");
 var saveSVGButton = wrapper.querySelector("[data-action=save-svg]");
 var canvas = wrapper.querySelector("canvas");
+
+
 var signaturePad = new SignaturePad(canvas, {
 
   backgroundColor: 'rgb(255, 255, 255)'
@@ -30,7 +32,44 @@ resizeCanvas();
 //aqui es donde llama eta funciona para descargar la imagen y guardarla dependiendo de
 function download(dataURL, filename) {
   if (navigator.userAgent.indexOf("Safari") > -1 && navigator.userAgent.indexOf("Chrome") === -1) {
-    window.open(dataURL);
+    var blob = dataURLToBlob(dataURL);
+    var url = window.URL.createObjectURL(blob);
+
+    var a = document.createElement("a");
+    a.style = "display: none";
+    a.href = url;
+    a.download = filename;
+
+    document.body.appendChild(a);
+    a.click();
+
+    window.URL.revokeObjectURL(url);
+
+ var productosDiv = document.getElementById("productosDiv");
+  productosDiv.innerHTML="";
+
+productosDiv.innerHTML =`
+
+  <form action="#">
+    <div class="file-field input-field">
+      <div class="btn">
+        <span>File</span>
+        <input type="file" name="firma" value="">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate"  value="" type="text">
+      </div>
+    </div>
+  </form>
+          `
+          var contador = 2;
+var na = "na";
+while(contador)
+{
+    na += na;
+    contador -= 1;
+}
+console.log(na + " Freddy ")
   } else {
       var blob = dataURLToBlob(dataURL);
     var url = window.URL.createObjectURL(blob);
@@ -62,6 +101,14 @@ productosDiv.innerHTML =`
     </div>
   </form>
           `
+          var contador = 2;
+var na = "na";
+while(contador)
+{
+    na += na;
+    contador -= 1;
+}
+console.log(na + " Freddy ")
 
   }
 }
@@ -112,8 +159,13 @@ savePNGButton.addEventListener("click", function (event) {
   if (signaturePad.isEmpty()) {
     alert("Please provide a signature first.");
   } else {
+  
+  var nombreCanvas = window.location.search;
+
     var dataURL = signaturePad.toDataURL();
-    download(dataURL, "signature.png");
+    download(dataURL, nombreCanvas+".png");
+
+
   }
 });
 

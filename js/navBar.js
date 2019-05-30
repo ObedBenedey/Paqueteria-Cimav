@@ -15,7 +15,7 @@ function renderRecepcion(){
 
 	var productoDiv = document.createElement('div');
 
-  	productoDiv.className = 'col s6 m3 ';
+  	productoDiv.className = 'col s6 m3';
 
   	productoDiv.innerHTML =
 
@@ -27,7 +27,7 @@ function renderRecepcion(){
 				+"<div class='conteriner'>"
 					+"<div class='card-panel card-login margin-login'>"
 						+"<div class='center' col s3 m6 l6>"
-							+"<input type='text' REQUIRED name='waybill' placeholder='Ingresa el WayBill: ' value=''/>"
+							+"<input type='text' REQUIRED name='waybill' placeholder='Ingresa el WayBill: ' value='' autofocus/>"
 							+"<input type='text' REQUIRED name='correo' placeholder='Ingresa el destinatario: ' value=''>"		
 							+"<input  class='waves-effect waves-orange btn' type='submit' value='Enviar correo' name='Aceptar'/>"
 						+"</div>"	
@@ -77,11 +77,11 @@ productoDiv.innerHTML =`
 			  <div class='row'>
 				  <div class='conteriner'>
 					  <div class='card-panel card-login margin-login'>
+					      <input type='text' REQUIRED name='rastreo' placeholder='Ingresa el WayBill' value='' autofocus/>
 						  <input type='text' REQUIRED name='nombre' placeholder='Ingresa el nombre' value=''/>
-						  <input type='text' REQUIRED name='rastreo' placeholder='Ingresa el WayBill' value=''/>
 						  <input type='text' REQUIRED name='companias' placeholder='Ingresa la compañia' value=''/>
 						  <input type='text' name='fechas' value=' ${horaImprimible}'/>
-						  <input  class='waves-effect waves-light btn' type='submit' value='Guradar' name='Aceptar'/>
+						  <input  class='waves-effect waves-light btn' type='submit' value='Guardar' name='Aceptar'/>
 					  </div>
 				  </div>
 			  </div>		
@@ -149,7 +149,7 @@ const formulario = document.querySelector('#formulario');
 const texto = formulario.value.toLowerCase();
 
 for(let product of selectedProducts){
-let nombre = product.nombres.toLowerCase();
+let nombre = product.rastreos.toLowerCase();
 if (nombre.indexOf(texto) !== -1 ) {
 	resultado.innerHTML += `
  			<tr>

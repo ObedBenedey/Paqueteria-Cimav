@@ -25,7 +25,7 @@ try {
     $mail->addAddress($destinatario.'@cimav.edu.mx');//esto es la variable a donde lo enviaremos
     $mail->isHTML(true);
     $mail->Subject = 'LLEGO PAQUETERIA CIMAV';//asuto de la paqueteria
-    $mail->Body = 'Que tal <b>'.$destinatario.'</b>, me comunico para informarle que ha llego un paquete a su nombre con el numero de rastreo: <b>'.$numeroRastreo.'</b>, favor de pasar a recogerlo, saludos. <b>CIMAV ALMACEN</b>';
+    $mail->Body = 'Que tal <b>'.$destinatario.'</b>, me comunico para informarle que ha llego un paquete a su nombre con el numero de rastreo: <b>'.$numeroRastreo.'</b>, favor de pasar a recogerlo, saludos. <b>CIMAV ALMACEN CHIHUAHUA.</b>';
     $mail->send();
 
 } catch (Exception $exception) {
