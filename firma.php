@@ -32,6 +32,12 @@
   $query = "SELECT * FROM info WHERE id ='$id'";
   $resultado = $conexion ->query($query);
   $row = $resultado->fetch_assoc();
+
+  date_default_timezone_set('Mexico/BajaSur');
+
+$time = time();
+
+$time2= date("Y-m-d H:i:s");
   ?>
 
 <div class="body">
@@ -69,7 +75,7 @@
               <input type='text' REQUIRED name='nombre' placeholder='Ingresa el nombre' value='<?php echo $row['nombres']; ?>'/>
               <input type='text' REQUIRED name='rastreo' placeholder='Ingresa el WayBill' value='<?php echo $row['rastreos']; ?>'/>
               <input type='text' REQUIRED name='companias' placeholder='Ingresa la compañia' value='<?php echo $row['companias']; ?>'/>
-              <input type='text' name='fechas' value='<?php echo $row['fechas']; ?>'/>
+              <input type='text' name='fecha1' value='<?php echo $time2 ?>'/>
               <input  class='waves-effect waves-light btn' type='submit' value='Guradar' name='Aceptar'/>
             </div>
            </div>

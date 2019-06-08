@@ -1,3 +1,5 @@
+
+
 var wrapper = document.getElementById("signature-pad");
 var clearButton = wrapper.querySelector("[data-action=clear]");
 var changeColorButton = wrapper.querySelector("[data-action=change-color]");
