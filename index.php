@@ -12,7 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<!--Import css-->
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-
+	<link rel="icon"  href="imagenFirmas/ico.ico">
 
 
 
@@ -32,8 +32,8 @@
 		</div>
 	</div>
 
+		
 
- 
         
 		<div class="container">
 			<div id="productosDiv"></div>
@@ -60,12 +60,16 @@
 	<script type="text/javascript">
 		var el = document.querySelectorAll('.tabs');
 		var instance = M.Tabs.init(el);
+
+		  
 	</script>
 	<script type="text/javascript" src="js/navBar.js"></script>
 	<script type="text/javascript">
 		 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.tooltipped');
     var instances = M.Tooltip.init(elems);
+
+
   });
 	</script>
 

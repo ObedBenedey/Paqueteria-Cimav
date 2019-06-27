@@ -5,6 +5,9 @@
     var elems = document.querySelectorAll('.tooltipped');
     var instances = M.Tooltip.init(elems);
 
+var elems = document.querySelectorAll('.materialboxed');
+    var instances = M.Materialbox.init(elems);
+
 
            var elems = document.querySelectorAll('.datepicker');
            var instances = M.Datepicker.init(elems);

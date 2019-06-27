@@ -24,7 +24,7 @@
 </head>
 
 
-  <body>
+<body>
   <?php 
   include("conexion.php");
 
@@ -35,10 +35,27 @@
 
   date_default_timezone_set('Mexico/BajaSur');
 
-$time = time();
+  $time = time();
 
-$time2= date("Y-m-d H:i:s");
+  $time2= date("Y-m-d H:i:s");
   ?>
+<form action="proceso_modificar.php?id=<?php echo $row['id']; ?>" method="POST" enctype="multipart/form-data">
+      <center>
+        <div class='row'>
+          <div class='conteriner'>
+           
+            <div id='test1' class='col s12'>
+             <div class='card-panel card-login margin-login'>
+              <div class="row" id="productosDiv"></div>
+
+
+                    <select name="tipo">
+                      <option selected value="personal">Personal</option>
+                      <option value="Cimav">Cimav</option>
+                    </select>
+
+            <input  class='waves-effect waves-light btn' type='submit' value='Guardar' name='Aceptar'/>
+
 
 <div class="body">
   <div id="signature-pad" class="signature-pad">
@@ -64,19 +81,14 @@ $time2= date("Y-m-d H:i:s");
   </div>
 </div>
 
-<form action="proceso_modificar.php?id=<?php echo $row['id']; ?>" method="POST" enctype="multipart/form-data">
-      <center>
-        <div class='row'>
-          <div class='conteriner'>
-           
-            <div id='test1' class='col s12'>
-             <div class='card-panel card-login margin-login'>
-              <div class="row" id="productosDiv"></div>
-              <input type='text' REQUIRED name='nombre' placeholder='Ingresa el nombre' value='<?php echo $row['nombres']; ?>'/>
+
+
+
+              <input type='text' REQUIRED  name='nombre' placeholder='Ingresa el nombre' value='<?php echo $row['nombres']; ?>'/>
               <input type='text' REQUIRED name='rastreo' placeholder='Ingresa el WayBill' value='<?php echo $row['rastreos']; ?>'/>
               <input type='text' REQUIRED name='companias' placeholder='Ingresa la compañia' value='<?php echo $row['companias']; ?>'/>
               <input type='text' name='fecha1' value='<?php echo $time2 ?>'/>
-              <input  class='waves-effect waves-light btn' type='submit' value='Guradar' name='Aceptar'/>
+            
             </div>
            </div>
           </div>

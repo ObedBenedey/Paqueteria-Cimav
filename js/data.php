@@ -2,7 +2,7 @@
 <?php 
 		include("conexion.php");
 
-		$query = "SELECT * FROM info ORDER BY id DESC LIMIT 70";
+		$query = "SELECT * FROM info ORDER BY id DESC LIMIT 25";
 		$resultado = mysqli_query($conexion, $query);
 		if (!$resultado) {
 			die("error");

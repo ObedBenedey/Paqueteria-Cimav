@@ -15,8 +15,6 @@ function renderSalida(){
 	        </tbody>
 
 	`
-
-
 var momentoActual= new Date();
 var año=momentoActual.getFullYear();
 var mes = momentoActual.getMonth();
@@ -32,6 +30,7 @@ productoDiv.innerHTML =`
 
  <div id='test1' class='col s12'>
 	  <center>
+
 		  <form  action='guardarSalida.php' method='POST' enctype='multipart/form-data'><br><br>
 			  <div class='row'>
 				  <div class='conteriner'>
@@ -45,6 +44,7 @@ productoDiv.innerHTML =`
 				  </div>
 			  </div>		
 		  </form>
+		  <img onclick='location.reload();' width="100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Cimav.svg/1280px-Cimav.svg.png">
 	  </center>
   </div>
   `
@@ -83,6 +83,7 @@ buscador.innerHTML+= `
           <i class="material-icons">close</i>
         </div>
       </form>
+
     </div>
   </nav>`
 
@@ -102,11 +103,11 @@ buscador.innerHTML+= `
         </thead>
 
     `
-const formulario = document.querySelector('#formulario');
+	const formulario = document.querySelector('#formulario');
 	const resultado = document.querySelector('#registros');
 	const filtrar = () => {
 		resultado.innerHTML='';
-const texto = formulario.value.toLowerCase();
+	const texto = formulario.value.toLowerCase();
 
 for(let product of selectedProducts){
 let nombre = product.rastreos.toLowerCase();
@@ -118,9 +119,10 @@ if (nombre.indexOf(texto) !== -1 ) {
             <td>`+product.companias+`</td>
             <td>`+product.fechas+`</td>
             <td>`+product.fecha1+`</td>
-            <td><img width="90" src="`+product.firmas+`"></td>
-            <td><button class=' color-boton'><a class='white-text' href='firma.php?id=`+product.id+`'>llllllllll</a></button></td>
+            <td><img width="100"  src="`+product.firmas+`"></td>
+            <td><button class='color-boton'><a class='black-text' href='firma.php?id=`+product.id+`'><i class="material-icons ">chevron_right</i></a></button></td>
           </tr>
+
 
 	`
   }
@@ -173,11 +175,15 @@ function renderExcel(){
 				+"</div>"
 			+"</div>"		
 		+"</form>"
+		+"<form action='reporteTodo.php' method='POST' enctype='multipart/form-data'><br><br>"
+
+		+"<input type='submit' class='color-boton 'value='llllllllllllllll' name='generar_report'> "
+		+"</form>"
+		+"<img  width='100' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Cimav.svg/1280px-Cimav.svg.png'>"
 	+"</center>"
 +"</div>";
 
 productosDiv.appendChild(productoDiv);
-
 
 }
 
