@@ -87,7 +87,7 @@
               <input type='text' REQUIRED  name='nombre' placeholder='Ingresa el nombre' value='<?php echo $row['nombres']; ?>'/>
               <input type='text' REQUIRED name='rastreo' placeholder='Ingresa el WayBill' value='<?php echo $row['rastreos']; ?>'/>
               <input type='text' REQUIRED name='companias' placeholder='Ingresa la compañia' value='<?php echo $row['companias']; ?>'/>
-              <input type='text' name='fecha1' value='<?php echo $time2 ?>'/>
+              <input type='text' readonly='readonly' name='fecha1' value='<?php echo $time2 ?>'/>
             
             </div>
            </div>

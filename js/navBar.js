@@ -38,7 +38,7 @@ productoDiv.innerHTML =`
 					      <input type='text' REQUIRED name='rastreo' placeholder='Ingresa el WayBill' value='' autofocus/>
 						  <input type='text' REQUIRED name='nombre' placeholder='Ingresa el Nombre' value=''/>
 						  <input type='text' REQUIRED name='companias' placeholder='Ingresa la Compañia' value=''/>
-						  <input type='text' name='fechas' value=' ${horaImprimible}'/>
+						  <input type='text' name='fechas' readonly='readonly' value=' ${horaImprimible}'/>
 						  <input  class='black-text active btn' type='submit' value='Guardar' name='Aceptar'/>
 					  </div>
 				  </div>
