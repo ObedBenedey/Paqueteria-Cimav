@@ -1,8 +1,7 @@
- 
 <?php 
 		include("conexion.php");
 
-		$query = "SELECT * FROM info ORDER BY id DESC LIMIT 40";
+		$query = "SELECT * FROM info ORDER BY id DESC LIMIT 150";
 		$resultado = mysqli_query($conexion, $query);
 		if (!$resultado) {
 			die("error");

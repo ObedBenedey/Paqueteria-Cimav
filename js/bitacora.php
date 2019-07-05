@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title>Paqueteria DEY CIMAV</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
@@ -13,13 +12,8 @@
 	<!--Import css-->
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="icon"  href="imagenFirmas/ico.ico">
-
-
-
 </head>
-<body >
-
-
+<body>
 
 	<div class="row">
 		<div class="col s12">
@@ -30,50 +24,20 @@
 				<li class="tab col s4"><a class="black-text" onclick=" renderExcel()">excel</a></li>
 			</ul>
 		</div>
+	<div class="container">
+		<div id="productosDiv"></div>
 	</div>
 
-		
-
-        
-		<div class="container">
-			<div id="productosDiv"></div>
-		</div>
-
-		<div class="container">
-			<div class="row" id="buscador"></div>
-		</div>
-
-         <div class="container">
-         	<div class="row">
-		 	 <table id="tabla" class="highlight">
-	       		 <tbody id="registros"></tbody>
-	     	 </table>
-     	  </div>      
-
-		</div>
-	<script type="text/javascript" src="js/materialize.min.js"></script>
-	<script type="text/javascript" src="js/jsMaterialize.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/data.js"></script>
-	
 
 
-	<script type="text/javascript">
-		var el = document.querySelectorAll('.tabs');
-		var instance = M.Tabs.init(el);
-
-		  
-	</script>
 	<script type="text/javascript" src="js/navBar.js"></script>
 	<script type="text/javascript">
 		 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.tooltipped');
     var instances = M.Tooltip.init(elems);
-
-
-  });
+	});
 	</script>
-
-	
 </body>
+
+
 </html>
