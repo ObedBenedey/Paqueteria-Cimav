@@ -39,7 +39,7 @@
 
   $time2= date("Y-m-d H:i:s");
   ?>
-<form action="proceso_modificar.php?id=<?php echo $row['id']; ?>" method="POST" enctype="multipart/form-data">
+<form id="forma-modificar" action="proceso_modificar.php?id=<?php echo $row['id']; ?>" method="POST" enctype="multipart/form-data">
       <center>
         <div class='row'>
           <div class='conteriner'>
@@ -47,14 +47,12 @@
             <div id='test1' class='col s12'>
              <div class='card-panel card-login margin-login'>
               <div class="row" id="productosDiv"></div>
-
+                    <input type="hidden" name="img64" id="img64" value="" />
 
                     <select name="tipo">
                       <option selected value="personal">Personal</option>
                       <option value="Cimav">Cimav</option>
                     </select>
-
-            <input  class='waves-effect waves-light btn' type='submit' value='Guardar' name='Aceptar'/>
 
 
 <div class="body">
@@ -73,7 +71,7 @@
 
         </div>
         <div>
-          <button type="button" class="btn" data-action="save-png">Guardar PNG</button>
+          <button type="button" class="btn" data-action="save-png">FIRMAR</button>
          
         </div>
       </div>

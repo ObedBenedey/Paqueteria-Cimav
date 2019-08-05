@@ -7,11 +7,13 @@ var undoButton = wrapper.querySelector("[data-action=undo]");
 var savePNGButton = wrapper.querySelector("[data-action=save-png]");
 var saveJPGButton = wrapper.querySelector("[data-action=save-jpg]");
 var saveSVGButton = wrapper.querySelector("[data-action=save-svg]");
+
+var saveButton = document.getElementById("save-btn");
+
 var canvas = wrapper.querySelector("canvas");
 
 
 var signaturePad = new SignaturePad(canvas, {
-
   backgroundColor: 'rgb(255, 255, 255)'
 });
 
@@ -165,11 +167,14 @@ savePNGButton.addEventListener("click", function (event) {
   var nombreCanvas = window.location.search;
 
     var dataURL = signaturePad.toDataURL();
-    download(dataURL, nombreCanvas+".png");
-
-
+    var img64 = document.getElementById("img64");
+    img64.value = signaturePad.toDataURL();
+    var img64 = document.getElementById("forma-modificar");
+    img64.submit();
+    //download(dataURL, nombreCanvas+".png");
   }
 });
+
 
 saveJPGButton.addEventListener("click", function (event) {
   if (signaturePad.isEmpty()) {
@@ -188,3 +193,4 @@ saveSVGButton.addEventListener("click", function (event) {
     download(dataURL, "signature.svg");
   }
 });
+
